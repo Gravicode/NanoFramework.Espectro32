@@ -57,3 +57,5 @@ C:\experiment\NanoFramework\RIoT\NF.Espectro32\NF.GroveDrivers\obj\Debug\NF.Grov
 C:\experiment\NanoFramework\RIoT\NF.Espectro32\NF.GroveDrivers\obj\Debug\NF.GroveDrivers.nfproj.CopyComplete
 C:\experiment\NanoFramework\RIoT\NF.Espectro32\NF.GroveDrivers\obj\Debug\NF.GroveDrivers.exe
 C:\experiment\NanoFramework\RIoT\NF.Espectro32\NF.GroveDrivers\obj\Debug\NF.GroveDrivers.pdb
+C:\experiment\NanoFramework\RIoT\NF.Espectro32\NF.GroveDrivers\obj\Debug\NF.GroveDrivers.pe
+C:\experiment\NanoFramework\RIoT\NF.Espectro32\NF.GroveDrivers\obj\Debug\NF.GroveDrivers.pdbx

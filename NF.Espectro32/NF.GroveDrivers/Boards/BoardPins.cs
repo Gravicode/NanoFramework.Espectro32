@@ -167,34 +167,21 @@ namespace NF.GroveDrivers.Boards
         }
         public static class AdcChannel
         {
-            //public const string Id = "GHIElectronics.TinyCLR.NativeApis.STM32F4.AdcProvider\\0";
-            public const int A0 = 0;//32;
-            public const int A1 = 1;//33;
-            public const int A2 = 2;//34;
-            public const int A3 = 3;//35;
-            public const int A4 = 4;//36;
-            public const int A5 = 5;//37;
-            public const int A6 = 6;//38;
-            public const int A7 = 7;//39;
+           
+            public const int A0 = 0;
+            public const int A1 = 1;
+            public const int A2 = 2;
+            public const int A3 = 3;
+            public const int A4 = 4;
+            public const int A5 = 5;
+            public const int A6 = 6;
+            public const int A7 = 7;
+            /*
+            0=36, 1=37, 2=38, 3=39, 4=32, 5=33, 6=34, 7=35
+            */
         }
         /*
-        /// <summary>Analog channel definition.</summary>
-        public static class AdcChannel
-        {
-            /// <summary>Pin definition.</summary>
-            public const int A0 = STM32F4.AdcChannel.Channel10;
-            /// <summary>Pin definition.</summary>
-            public const int A1 = STM32F4.AdcChannel.Channel11;
-            /// <summary>Pin definition.</summary>
-            public const int A2 = STM32F4.AdcChannel.Channel12;
-            /// <summary>Pin definition.</summary>
-            public const int A3 = STM32F4.AdcChannel.Channel13;
-            /// <summary>Pin definition.</summary>
-            public const int A4 = STM32F4.AdcChannel.Channel14;
-            /// <summary>Pin definition.</summary>
-            public const int A5 = STM32F4.AdcChannel.Channel15;
-        }
-
+      
         /// <summary>Uart port definition.</summary>
         public static class UartPort
         {

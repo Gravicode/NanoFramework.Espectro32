@@ -8,6 +8,7 @@ namespace NF.GroveDrivers
     public class Program
     {
         static LedSocket Led;
+        static Buzzer buzz;
         public static void Main()
         {
             try
@@ -17,16 +18,18 @@ namespace NF.GroveDrivers
                 //var lcd = new LcdRgbBacklight();
                 //var rgb = new RgbLed(Boards.Espectro32.GpioPin.ESPECTRO32_RGBLED_GPIO);
                 //rgb.Demo();
+                buzz = new Buzzer(Boards.Espectro32.GpioPin.D14);
                 Led = new LedSocket(Boards.Espectro32.GpioPin.BoardLed);
                 var btn = new Button(Boards.Espectro32.GpioPin.ESPECTRO32_BUTTON_A_PIN);
                 btn.ButtonPressed += Btn_ButtonPressed;
+                btn.ButtonReleased += Btn_ButtonReleased;
                 //int counter = 0;
                 // User code goes here
                 /*
                 
                 lcd.EnableDisplay(true);
                 */
-                //var rotary = new RotaryAngleSensor(Boards.Espectro32.AdcChannel.A7);
+                //var light = new LightSensor(Boards.Espectro32.AdcChannel.A0);
                 while (true)
                 {
                     //lcd.Clear();
@@ -35,7 +38,7 @@ namespace NF.GroveDrivers
                     //var lightVal = light.ReadLightLevel();
                     //Console.WriteLine(lightVal.ToString());
                     //Console.WriteLine("counter : "+counter++);
-                    //var valRot = rotary.GetAngle();
+                    //var valRot = light.ReadLightLevel();
                     Led.TurnOn();
                     Thread.Sleep(1000);
                     Led.TurnOff();
@@ -48,8 +51,14 @@ namespace NF.GroveDrivers
             }
         }
 
+        private static void Btn_ButtonReleased()
+        {
+            buzz.TurnOff();
+        }
+
         private static void Btn_ButtonPressed()
         {
+            buzz.TurnOn();
             //Led.Blink();
         }
     }

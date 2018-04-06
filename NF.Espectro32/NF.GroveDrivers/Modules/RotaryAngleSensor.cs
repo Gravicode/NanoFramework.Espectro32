@@ -4,8 +4,9 @@ using Windows.Devices.Adc;
 namespace SeeedGroveStarterKit {
     public class RotaryAngleSensor {
         private AdcChannel Channel;
-        public RotaryAngleSensor(int AdcPinNumber) {
-            Channel = AdcController.GetDefault().OpenChannel(AdcPinNumber);
+        public RotaryAngleSensor(int ChannelNumber) {
+            var AdcCtl = AdcController.GetDefault();
+            Channel = AdcCtl.OpenChannel(ChannelNumber);
         }
         // between 0 and 100
         public double GetAngle() {
